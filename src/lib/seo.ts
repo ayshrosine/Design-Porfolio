@@ -1,45 +1,44 @@
 // Everything search engines and AI answer engines read about the site lives
 // here: titles, descriptions, the share image, and the structured data that
-// says who Nidhi is. None of it changes what's on screen.
+// says who Ayush is. None of it changes what's on screen.
 
-export const SITE_URL = "https://www.somehowliving.tech";
+export const SITE_URL = "https://ayshrosine.tech";
 export const OG_IMAGE = `${SITE_URL}/og.png`;
 
-export const NAME = "Nidhi Prajapati";
+export const NAME = "Ayush Bisen";
 export const ABOUT_SHORT =
-  "Nidhi Prajapati is a software engineer building AI agents, voice AI and privacy-first web3 tools, currently working on AI agent reliability at Emergent (YC24).";
+  "Ayush Bisen is a full-stack developer and Computer Science and Business Systems student in Nagpur who builds full-stack products, experiments with AI, and turns messy ideas into usable software.";
 
 export const PROFILES = [
-  "https://www.linkedin.com/in/nidhi-prajapati-5b4483248/",
-  "https://github.com/SomehowLiving",
-  "https://x.com/pnyk05",
-  "https://devfolio.co/@nuna",
-  "https://www.npmjs.com/package/@onkey/sdk",
+  "https://linkedin.com/in/ayshrosine/",
+  "https://github.com/ayshrosine",
+  "https://x.com/ayshrosine",
+  "https://instagram.com/ayshrosine",
 ];
 
 export const person = {
   "@type": "Person",
   "@id": `${SITE_URL}/#person`,
   name: NAME,
-  alternateName: ["Nidhi", "somehowliving"],
+  alternateName: ["Ayush", "Ayush Satyawan Bisen", "ayshrosine"],
   url: SITE_URL,
   image: OG_IMAGE,
-  email: "mailto:nidhiyp05@gmail.com",
-  jobTitle: "Software Engineer",
+  email: "mailto:ayushsatyawanbisen@gmail.com",
+  jobTitle: "Full-stack Developer",
   description: ABOUT_SHORT,
-  worksFor: { "@type": "Organization", name: "Emergent", description: "Y Combinator (YC24) company" },
-  alumniOf: { "@type": "CollegeOrUniversity", name: "Sir M. Visvesvaraya Institute of Technology (SMVIT)" },
-  address: { "@type": "PostalAddress", addressLocality: "Bengaluru", addressCountry: "IN" },
+  alumniOf: { "@type": "CollegeOrUniversity", name: "St. Vincent Pallotti College of Engineering & Technology" },
+  address: { "@type": "PostalAddress", addressLocality: "Nagpur", addressRegion: "Maharashtra", addressCountry: "IN" },
   knowsAbout: [
-    "AI agents",
-    "Agent reliability",
-    "Voice AI",
-    "Web3",
-    "Zero-knowledge proofs",
-    "Agentic payments",
-    "WebMCP",
-    "Privacy-first software",
     "Full-stack development",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Python",
+    "FastAPI",
+    "Backend engineering",
+    "AI integration",
+    "Databases",
+    "Product building",
   ],
   sameAs: PROFILES,
 };
@@ -64,7 +63,7 @@ export function pageMeta({ title, description, path }: { title: string; descript
       { property: "og:image", content: OG_IMAGE },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
-      { property: "og:image:alt", content: "the anatomy of a curious developer — Nidhi Prajapati" },
+      { property: "og:image:alt", content: "the anatomy of a curious builder — Ayush Bisen" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: OG_IMAGE },

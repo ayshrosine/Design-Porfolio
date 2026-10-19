@@ -13,9 +13,6 @@ import headphones from "@/assets/obj3d-headphones.webp";
 import keys from "@/assets/obj3d-keys.webp";
 import me from "@/assets/me.webp";
 import laptop from "@/assets/obj3d-laptop.webp";
-import rexImage from "@/assets/project-rex.webp";
-import screenmeshImage from "@/assets/project-screenmesh.webp";
-import voxieImage from "@/assets/project-voxie.webp";
 import { CLIMBED_OUT, RabbitHoleButton, takeFlag } from "@/components/rabbit-hole";
 import { Button } from "@/components/ui/button";
 import { jsonLd, pageMeta, person, SITE_URL } from "@/lib/seo";
@@ -24,17 +21,17 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/")({
   head: () => ({
     ...pageMeta({
-      title: "Nidhi Prajapati — software engineer building AI agents & web3",
+      title: "Ayush Bisen — full-stack developer & builder",
       description:
-        "Nidhi Prajapati is a Bengaluru-based software engineer building AI agents, voice AI and privacy-first web3 tools. AI agent reliability at Emergent (YC24). Voxie, REX, Inscribe, ScreenMesh, Onkey.",
+        "Ayush Bisen is a Nagpur-based full-stack developer and CSBS student building full-stack products and AI tools: AssetFlow, CampusX, KizunaX, SachCheck.",
       path: "/",
     }),
     scripts: [
       jsonLd({
         "@graph": [
           person,
-          { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: SITE_URL, name: "Nidhi Prajapati", publisher: { "@id": `${SITE_URL}/#person` } },
-          { "@type": "ProfilePage", url: SITE_URL, name: "Nidhi Prajapati — the anatomy of a curious developer", mainEntity: { "@id": `${SITE_URL}/#person` } },
+          { "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: SITE_URL, name: "Ayush Bisen", publisher: { "@id": `${SITE_URL}/#person` } },
+          { "@type": "ProfilePage", url: SITE_URL, name: "Ayush Bisen — the anatomy of a curious builder", mainEntity: { "@id": `${SITE_URL}/#person` } },
         ],
       }),
     ],
@@ -42,11 +39,11 @@ export const Route = createFileRoute("/")({
   component: Portfolio,
 });
 
-const EMAIL = "nidhiyp05@gmail.com";
+const EMAIL = "ayushsatyawanbisen@gmail.com";
 const LINKS = {
-  linkedin: "https://www.linkedin.com/in/nidhi-prajapati-5b4483248/",
-  github: "https://github.com/SomehowLiving",
-  x: "https://x.com/pnyk05",
+  linkedin: "https://linkedin.com/in/ayshrosine/",
+  github: "https://github.com/ayshrosine",
+  x: "https://x.com/ayshrosine",
 };
 
 // The cursor's comment bubble stays quiet until something has a reason to
@@ -60,11 +57,12 @@ const say = (id: string, text: string, fade = true) => {
   window.dispatchEvent(new CustomEvent<CursorComment>("cursor-comment", { detail: { id, text, fade } }));
 };
 
-// The image opens the live site; the arrow opens the code.
-const projects = [
-  { number: "01", title: "Voxie", image: voxieImage, tags: ["AI", "Open source"], blurb: "voice agents that speak your caller's language: 17 languages, real barge-in, open source.", live: "https://voxieai.vercel.app/", code: "https://github.com/SomehowLiving/Voxie" },
-  { number: "02", title: "REX by Softknock", image: rexImage, tags: ["AI", "Product"], blurb: "follows up every failed payment, by email, text and a friendly call, in your customer's own language.", live: "https://softknockai.vercel.app/", code: "https://github.com/SomehowLiving/rex.ai" },
-  { number: "03", title: "ScreenMesh", image: screenmeshImage, tags: ["Privacy", "Open source"], blurb: "move work between your devices without moving it through an app you don't trust. local-first, end-to-end encrypted.", live: "https://screenmesh.vercel.app/", code: "https://github.com/SomehowLiving/screenmesh" },
+// The image opens the live site; the arrow opens the code. Projects without a
+// screenshot get their name drawn over a loose thread instead.
+const projects: { number: string; title: string; image?: string; tags: string[]; blurb: string; live?: string; code: string }[] = [
+  { number: "01", title: "CampusX", tags: ["Full-stack", "Real users"], blurb: "asset management for a real college: QR tracking, conflict-free bookings, and accreditation reports that write themselves.", code: "https://github.com/ayshrosine" },
+  { number: "02", title: "KizunaX", tags: ["AI", "Full-stack"], blurb: "turns a student's certificates, resumes and projects into a searchable, AI-powered digital identity.", code: "https://github.com/ayshrosine" },
+  { number: "03", title: "SachCheck", tags: ["AI"], blurb: "checks videos, images and audio for deepfakes and scams, and explains the verdict.", code: "https://github.com/ayshrosine" },
 ];
 
 // The story canvas is CANVAS_VW wide and slides CANVAS_TRAVEL_VW across the
@@ -224,7 +222,7 @@ function Portfolio() {
       setNoteRevealed(true);
       setScrollReady(true);
       window.clearTimeout(greet);
-      greet = window.setTimeout(() => say("intro", "hey there, nidhi here."), 1800);
+      greet = window.setTimeout(() => say("intro", "hey, i'm ayush. usually building something."), 1800);
       window.clearTimeout(noteTimer);
       window.clearTimeout(unlockTimer);
       skipEvents.forEach((name) => window.removeEventListener(name, unlock));
@@ -302,7 +300,7 @@ function Portfolio() {
     <main>
       <header className={cn("fixed inset-x-0 top-0 z-50 grid grid-cols-[minmax(0,1fr)_auto] items-center px-5 py-5 transition-opacity duration-700 sm:px-8 sm:py-7", solidHeader ? "bg-background" : "bg-transparent", scrollReady ? "opacity-100" : "pointer-events-none animate-reveal [animation-delay:2.6s]")}>
         <button aria-label="Back to introduction" onClick={() => go("brain")} className="w-fit bg-transparent font-serif text-3xl font-medium">
-          Nidhi
+          Ayush
         </button>
         <nav className="hidden items-center gap-7 text-sm font-medium md:flex" aria-label="Main navigation">
           <button onClick={() => go("brain")} className="story-link bg-transparent">brain</button>
@@ -405,11 +403,11 @@ function IntroScene({ contentRevealed, noteRevealed }: { contentRevealed: boolea
   return (
     <div className="absolute left-0 top-0 h-full w-screen">
       <div className={cn("absolute bottom-10 left-8 transition-all duration-700 sm:bottom-8", contentRevealed ? "opacity-100" : "animate-reveal [animation-delay:2.2s]")}>
-        <p className="text-4xl font-semibold leading-[0.95] sm:text-5xl">the<br />anatomy of a<br /><span className="font-serif italic">curious developer.</span></p>
+        <p className="text-4xl font-semibold leading-[0.95] sm:text-5xl">the<br />anatomy of a<br /><span className="font-serif italic">curious builder.</span></p>
       </div>
       <div className={cn("absolute left-[62%] top-28 flex max-w-56 origin-bottom-left items-start gap-2 text-sm text-muted-foreground transition-all duration-500", noteRevealed ? "opacity-100" : "animate-reveal [animation-delay:2.2s]")}>
         <svg aria-hidden="true" viewBox="0 0 40 30" className="mt-1 h-6 w-8 shrink-0"><path d="M38 4 C24 6 12 14 4 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /><path d="M4 24 L13 22 M4 24 L7 15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
-        <span>an almost accurate map of everything on my mind.</span>
+        <span>an almost accurate map of everything going on in my head.</span>
       </div>
       <div className={cn("absolute bottom-8 right-8 hidden text-right transition-all delay-150 duration-700 sm:block", contentRevealed ? "opacity-100" : "animate-reveal [animation-delay:2.35s]")}>
         <p className="mb-4 text-sm">or do i say, welcome to my portfolio :)</p>
@@ -449,7 +447,7 @@ function TinkerScene() {
 
 // The stretch of thread the climber can travel along, in vw.
 const CLIMB_FROM = 157;
-// Down the slope past the heading, all the way to the web3 globe.
+// Down the slope past the heading, all the way to the globe.
 const CLIMB_TO = 197;
 // How close (vh) the pointer must be to the thread for her to follow it.
 const CLIMB_REACH = 14;
@@ -477,7 +475,7 @@ function sampleThread(from: number, to: number) {
 
 // The climber hangs from the thread itself and swings gently from her grip.
 // Move the pointer along the thread and she climbs after it, hand over hand —
-// tilting with the slope — as far as the web3 globe. It listens to the whole
+// tilting with the slope — as far as the globe. It listens to the whole
 // window rather than a hit box, so it never blocks the heading or the globe.
 function Climber() {
   const originRef = useRef<HTMLDivElement>(null);
@@ -563,8 +561,8 @@ function Climber() {
 }
 
 const heart = [
-  { src: globe, alt: "a globe wrapped in orbits", x: 200, y: 56, title: "web3 came first.", body: "got curious about systems that don't need one person in charge.", label: "yes, i'm still here." },
-  { src: headphones, alt: "a pair of headphones", x: 224, y: 22, title: "turns out, i like people too.", body: "explaining things is pretty fun too.", label: "docs, talks, demos, communities." },
+  { src: globe, alt: "a globe wrapped in orbits", x: 200, y: 56, title: "the web came first.", body: "got curious about how the things i used every day actually worked.", label: "still my favourite rabbit hole." },
+  { src: headphones, alt: "a pair of headphones", x: 224, y: 22, title: "turns out, i like teams too.", body: "hackathons taught me more than any syllabus.", label: "48 hours, no sleep, one demo." },
   { src: brain, alt: "a brain", x: 260, y: 60, title: "and now, AI.", body: "half engineer. half “what if?”", label: "still trying to understand this thing." },
 ];
 
@@ -591,12 +589,12 @@ function HeartScene() {
 // One beat per year, told like a story: a short line that moves it forward,
 // and the detail underneath for anyone who wants it.
 const timeline = [
-  { year: "2021", title: "started a company at 17.", line: "Alphonse Esports — tournaments, teams, and a lot of learning on the job, mid-COVID." },
-  { year: "2022", title: "went back to school.", line: "computer science at SMVIT. kept building things on the side." },
-  { year: "2023", title: "found web3.", line: "the tech was weird. naturally, i stayed." },
-  { year: "2024", title: "started shipping.", line: "smart contracts, hackathons, open-source experiments." },
-  { year: "2025", title: "brought people along.", line: "workshops, mentoring, and a few ambassador badges." },
-  { year: "2026", title: "then, AI happened.", line: "now keeping AI agents reliable in production." },
+  { year: "2024", title: "started engineering.", line: "computer science and business systems at SVPCET, Nagpur." },
+  { year: "2025", title: "started shipping.", line: "side projects, hackathons, and a lot of late-night debugging." },
+  { year: "2025", title: "won a few.", line: "1st at SIH Expo, 3rd at HackGenX, top 10 at HackronyX and Idea3." },
+  { year: "2026", title: "built for real users.", line: "CampusX went live at a real college, tested with faculty." },
+  { year: "2026", title: "kept winning.", line: "1st at TECHELONS national hackathon and the BIT Tadoba hackathon." },
+  { year: "2026", title: "then, AI happened.", line: "now building AI into everything i make." },
 ];
 const TIMELINE_FROM = 304;
 const TIMELINE_STEP = 18;
@@ -1032,9 +1030,9 @@ function MobileStory({ ready, onWork }: { ready: boolean; onWork: () => void }) 
         </svg>
         <div className={cn("absolute right-5 top-[17svh] flex w-44 items-start gap-1.5 text-[0.8rem] leading-snug text-muted-foreground", ready ? "opacity-100" : "animate-reveal [animation-delay:2.2s]")}>
           <svg aria-hidden="true" viewBox="0 0 40 30" className="mt-4 h-5 w-7 shrink-0"><path d="M38 4 C24 6 12 14 4 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /><path d="M4 24 L13 22 M4 24 L7 15" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" /></svg>
-          <span>an almost accurate map of everything on my mind.</span>
+          <span>an almost accurate map of everything going on in my head.</span>
         </div>
-        <p className={cn("absolute left-5 top-[90svh] text-[2.6rem] font-semibold leading-[0.95]", ready ? "opacity-100" : "animate-reveal [animation-delay:2.2s]")}>the<br />anatomy of a<br /><span className="font-serif italic">curious developer.</span></p>
+        <p className={cn("absolute left-5 top-[90svh] text-[2.6rem] font-semibold leading-[0.95]", ready ? "opacity-100" : "animate-reveal [animation-delay:2.2s]")}>the<br />anatomy of a<br /><span className="font-serif italic">curious builder.</span></p>
         <Anchor x="86%" y="66svh" />
         <Anchor x="93%" y="122svh" />
       </div>
@@ -1151,19 +1149,28 @@ function Works({ filter, setFilter }: { filter: string; setFilter: (filter: stri
       <div className="pointer-events-none absolute inset-x-0 top-0 overflow-hidden" aria-hidden="true"><p className="translate-y-[-38%] whitespace-nowrap text-[26vw] font-semibold leading-none text-muted">WORKS</p></div>
       <div className="relative mx-auto grid max-w-[1500px] gap-16 pt-[18vw] lg:grid-cols-[minmax(280px,0.65fr)_minmax(0,1.35fr)]">
         <aside className="h-fit lg:sticky lg:top-28">
-          <p className="text-sm text-muted-foreground">selected work / 2022—now</p>
+          <p className="text-sm text-muted-foreground">selected work / 2024—now</p>
           <h2 className="mt-4 max-w-md font-serif text-5xl leading-none sm:text-6xl">a few things,<br /><em>chosen on purpose.</em></h2>
-          <p className="mt-8 max-w-sm text-muted-foreground">AI, privacy, and open source, built end to end.</p>
+          <p className="mt-8 max-w-sm text-muted-foreground">full-stack products and AI tools, built end to end.</p>
           <p className="mb-3 mt-10 text-sm">show me</p>
           <div className="flex flex-wrap gap-2">
-            {["All", "AI", "Privacy", "Open source"].map((item) => <Button key={item} variant="filter" data-active={filter === item} onClick={() => setFilter(item)} data-cursor={`filter: ${item.toLowerCase()}`}>{item}</Button>)}
+            {["All", "AI", "Full-stack", "Real users"].map((item) => <Button key={item} variant="filter" data-active={filter === item} onClick={() => setFilter(item)} data-cursor={`filter: ${item.toLowerCase()}`}>{item}</Button>)}
           </div>
         </aside>
         <div className="grid gap-20">
           {filtered.map((project) => (
             <article key={project.title} className="group">
-              <a href={project.live} target="_blank" rel="noreferrer" className="block overflow-hidden border border-border bg-muted" data-cursor="see it live ↗">
-                <img src={project.image} alt={`${project.title} website`} loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]" />
+              <a href={project.live ?? project.code} target="_blank" rel="noreferrer" className="block overflow-hidden border border-border bg-muted" data-cursor={project.live ? "see it live ↗" : "read the code ↗"}>
+                {project.image ? (
+                  <img src={project.image} alt={`${project.title} website`} loading="lazy" width={1200} height={912} className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]" />
+                ) : (
+                  <div className="relative grid aspect-[4/3] w-full place-items-center overflow-hidden transition-transform duration-700 ease-out group-hover:scale-[1.025]">
+                    <svg aria-hidden="true" viewBox="0 0 200 150" className="absolute inset-0 h-full w-full text-foreground/20">
+                      <path d="M-10 115 C40 25 70 140 100 70 C120 25 160 40 130 92 C110 125 70 80 110 60 C150 40 170 125 215 60" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+                    </svg>
+                    <span className="relative font-serif text-5xl sm:text-7xl">{project.title}</span>
+                  </div>
+                )}
               </a>
               <div className="mt-5 grid grid-cols-[minmax(0,1fr)_auto] items-start gap-5">
                 <div className="min-w-0"><p className="text-xs text-muted-foreground">{project.number} / {project.tags.join(" · ")}</p><h3 className="mt-1 font-serif text-4xl">{project.title}</h3><p className="mt-2 max-w-xl text-muted-foreground">{project.blurb}</p></div>
@@ -1261,7 +1268,7 @@ function MeCutout({ visible, phone = false, imgRef }: { visible: boolean; phone?
       <img
         ref={imgRef}
         src={me}
-        alt="nidhi, one hand up in a peace sign, holding the end of the thread"
+        alt="ayush, one hand up in a peace sign, holding the end of the thread"
         draggable={false}
         onContextMenu={(e) => e.preventDefault()}
         data-cursor=""
@@ -1317,7 +1324,7 @@ function ScribbleArrow({ d, head, className, style }: { d: string; head: string;
 
 const pill = "inline-flex items-center justify-between gap-10 rounded-xl px-5 text-[1.05rem] transition-colors";
 
-// 10 — the end. "oh, hi. i'm nidhi." — and the thread leaves the "hi." and
+// 10 — the end. "oh, hi. i'm ayush." — and the thread leaves the "hi." and
 // waves its way across into my raised hand. Margin notes scribbled around it.
 function OhHi() {
   const ref = useRef<HTMLElement>(null);
@@ -1446,7 +1453,7 @@ function OhHi() {
         </svg>
         <MeCutout visible={stage.reached} />
         <div {...arrive(stage.reached, ".3s", "absolute", { left: `${HAND_X + 9.5}vw`, top: "32vh" })}>
-          <Scribble className="w-36" rotate={-14}>same girl...<br />just more<br />ideas now.</Scribble>
+          <Scribble className="w-36" rotate={-14}>same me...<br />just more<br />ideas now.</Scribble>
           <ScribbleArrow className="-left-2 top-24" d="M30 4 C32 20 22 32 6 36" head="M6 36 L16 29 M6 36 L15 42" />
         </div>
         <div {...arrive(stage.reached, ".6s", "absolute", { left: `${HAND_X + 9.5}vw`, top: "65vh" })}>
@@ -1462,7 +1469,7 @@ function OhHi() {
           <h2 className="font-serif text-[clamp(3.5rem,6.6vw,7.5rem)] leading-[0.9] tracking-[-0.01em]">
             <span ref={hiRef}>oh, hi.</span>
             <br />
-            i'm <em>nidhi</em>.
+            i'm <em>ayush</em>.
           </h2>
         </div>
         <p className="mt-4 text-[clamp(1.05rem,1.25vw,1.35rem)] leading-[1.2] text-muted-foreground">still curious.<br />still building.<br />still opening tabs.</p>
@@ -1493,7 +1500,7 @@ function OhHi() {
         </div>
       </div>
 
-      <button onClick={() => document.getElementById("brain")?.scrollIntoView({ behavior: "smooth" })} className="story-link mt-10 block bg-transparent text-xs text-muted-foreground/70 md:absolute md:bottom-5 md:right-8 md:mt-0" data-cursor="rewind ↑">© 2026 nidhi · back to top ↑</button>
+      <button onClick={() => document.getElementById("brain")?.scrollIntoView({ behavior: "smooth" })} className="story-link mt-10 block bg-transparent text-xs text-muted-foreground/70 md:absolute md:bottom-5 md:right-8 md:mt-0" data-cursor="rewind ↑">© 2026 ayush · back to top ↑</button>
     </section>
   );
 }
@@ -1514,8 +1521,10 @@ function PhoneComment() {
     };
     window.addEventListener("figure-open", hush);
     window.addEventListener("cursor-comment", onComment);
-    return () => window.removeEventListener("figure-open", hush);
+    return () => {
+      window.removeEventListener("figure-open", hush);
       window.removeEventListener("cursor-comment", onComment);
+    };
   }, []);
 
   useEffect(() => {

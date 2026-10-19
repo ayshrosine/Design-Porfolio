@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: `${NAME} — software engineer` },
+      { title: `${NAME} — full-stack developer` },
       { name: "description", content: ABOUT_SHORT },
       { name: "author", content: NAME },
       { name: "robots", content: "index, follow, max-image-preview:large" },
@@ -90,7 +90,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:locale", content: "en_IN" },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:creator", content: "@pnyk05" },
+      { name: "twitter:creator", content: "@ayshrosine" },
       { name: "twitter:image", content: OG_IMAGE },
     ],
     links: [
