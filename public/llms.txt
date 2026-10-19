@@ -1,52 +1,44 @@
-# Nidhi Prajapati
+# Ayush Bisen
 
-> Nidhi Prajapati is a software engineer building AI agents, voice AI and privacy-first web3 tools, currently working on AI agent reliability at Emergent (YC24). She is based in Bengaluru, India, and is open to work, including freelance and remote roles.
+> Ayush Bisen is a full-stack developer and Computer Science and Business Systems student in Nagpur, India, who builds full-stack products, experiments with AI, and turns messy ideas into usable software. Ayush is open to internships, freelance projects, remote opportunities and collaborations.
 
-Website: https://www.somehowliving.tech
-Email: nidhiyp05@gmail.com
-LinkedIn: https://www.linkedin.com/in/nidhi-prajapati-5b4483248/
-GitHub: https://github.com/SomehowLiving
-X: https://x.com/pnyk05
-Devfolio: https://devfolio.co/@nuna
+Website: https://ayshrosine.tech
+Email: ayushsatyawanbisen@gmail.com
+LinkedIn: https://linkedin.com/in/ayshrosine/
+GitHub: https://github.com/ayshrosine
+X: https://x.com/ayshrosine
+Instagram: https://instagram.com/ayshrosine
 
 ## About
 
-Nidhi Prajapati is a software engineer who builds AI agents and the infrastructure around them. She works as an AI Agent Reliability Engineer at Emergent (YC24), keeping autonomous coding agents and AI-generated applications reliable in production, and is part of the Nethermind Internship Program, exploring AI-supported blockchain systems: agentic systems, security, natural-language interfaces, protocol design and agentic payments.
+Ayush Bisen (Ayush Satyawan Bisen) is studying for a B.Tech in Computer Science and Business Systems at St. Vincent Pallotti College of Engineering & Technology, Nagpur (2024–2028). From workflow automation and campus systems to AI-powered tools, Ayush likes understanding how things work, building them from scratch, and shipping something people can actually use.
 
-She started a company at 17, Alphonse Esports, during COVID, then studied computer science at SMVIT (Sir M. Visvesvaraya Institute of Technology), Bengaluru. She found web3 in 2023 and built across multiple chains: SDKs, protocols, zero-knowledge proofs and agentic payments. She became an Algorand Foundation Ambassador, a SheFi Scholar and a Dev3Pack Fellow, ran workshops, mentored developers, and was the founding blockchain engineer at PeerHire. Since 2026 her focus is AI: agents, reliability, and the line where AI meets real systems.
-
-She builds end to end, from product idea and design to production, and cares most about what something is for and how it feels to the person using it.
+Skills: C, C++, Python, JavaScript, TypeScript, SQL; React, Next.js, Tailwind CSS; Node.js, Express, FastAPI, REST APIs, JWT, OAuth; MongoDB, PostgreSQL, MySQL, Redis; Git, Docker; Redux, Zustand; Firebase, Cloudinary, Zerops, Cloudflare R2.
 
 ## Selected projects
 
-- [Voxie](https://voxieai.vercel.app/): voice agents that speak your caller's language: listening, turn-taking, interruptions and the voice, in 17 languages. Open source: https://github.com/SomehowLiving/Voxie
-- [REX by Softknock](https://softknockai.vercel.app/): an autonomous revenue execution agent that follows up every failed payment by email, text and a friendly call, in the customer's own language.
-- [Inscribe](https://studio-bay-omega.vercel.app/): a browser extension and agent-native workshop built on WebMCP. It uses a website's own declared tools when it has them and infers capabilities when it doesn't, so an AI agent acts on meaning instead of pixels. https://github.com/SomehowLiving/Inscribe
-- [ScreenMesh](https://screenmesh.vercel.app/): move work between your devices without moving it through an app you don't trust. Local-first, end-to-end encrypted. https://github.com/SomehowLiving/screenmesh
-- [Onkey](https://www.npmjs.com/package/@onkey/sdk): self-hosted web3 authentication for everyone, with email login and smart contract wallets, published on npm as @onkey/sdk. https://github.com/SomehowLiving/onkey
-- [Point](https://github.com/nidhiprajapati-ops/point): a system-wide spatial AI context layer: press a shortcut, select anything visible on screen, give an instruction, and get an answer or trigger an action.
-- [Acre](https://acre-web-three.vercel.app/): zero-knowledge attestations that let gig workers prove their income without revealing their financial data.
-- [Consensa](https://consensa.vercel.app/): three independent AI signals commit blind, and two must agree on-chain before anything trades.
-- [Ward](https://ward-steel.vercel.app/): runs risky on-chain interactions inside disposable, loss-capped smart-wallet pockets.
-- [x402 builder kit](https://x402-kit-kappa.vercel.app): a starter kit for AI agents that pay for APIs with the x402 protocol on Algorand.
-- [ClinaraAI](https://clinaraai-eight.vercel.app): clinical decision support with explainable AI across six diseases.
-- [UsageLedger](https://usage-ledger.vercel.app) and [Billing Migration Studio](https://billing-migration-studio.vercel.app): usage-based billing and billing-data migration infrastructure for SaaS.
+- CampusX (AssetFlow Campus): a production asset-management system for a real college, with QR asset tracking, conflict-checked bookings, a maintenance kanban and automated NAAC/NBA accreditation reports.
+- AssetFlow: a multi-tenant enterprise asset and resource management platform with lifecycle tracking, transfers, booking conflict detection and role-based access.
+- KizunaX: an AI digital identity platform that turns students' certificates, resumes and projects into a searchable portfolio, using OCR, LLMs, a knowledge graph and ChromaDB.
+- SachCheck: an AI deepfake and scam detection platform for video, image and audio, with explainable verdicts.
 
-All projects: https://www.somehowliving.tech/work
+All projects: https://ayshrosine.tech/work
+
+## Achievements
+
+- 1st place, TECHELONS 2026 National Hackathon
+- 1st place, BIT Tadoba Andhari Tiger Reserve Hackathon (Rs. 50,000 prize)
+- 1st place, SIH Expo 2025 (Engineering India Day Expo)
+- 3rd position, HackGenX 2025
+- Top 10 at HackronyX and Idea3; Top 15 at CIH
 
 ## FAQ
 
-### Who is Nidhi Prajapati?
-A Bengaluru-based software engineer who builds AI agents, voice AI and privacy-first web3 tools. She works on AI agent reliability at Emergent (YC24).
+### Who is Ayush Bisen?
+A Nagpur-based full-stack developer and CSBS student who builds full-stack products and AI tools.
 
-### What does she build?
-AI agents (Voxie, REX, Inscribe, Point), web3 and privacy tools (Acre, Consensa, Ward, Onkey, the x402 builder kit), and billing infrastructure (UsageLedger, Billing Migration Studio). She works end to end, from product idea and design to production.
+### Is Ayush open to work?
+Yes: internships, freelance projects, remote opportunities and collaborations.
 
-### Is she open to work?
-Yes. She is open to full-time roles and freelance projects, in Bengaluru or remote.
-
-### How do I contact her?
-Email nidhiyp05@gmail.com, or reach out on LinkedIn: https://www.linkedin.com/in/nidhi-prajapati-5b4483248/
-
-### Where can I see her work?
-https://www.somehowliving.tech/work and https://github.com/SomehowLiving
+### How do I contact Ayush?
+Email ayushsatyawanbisen@gmail.com, or reach out on LinkedIn: https://linkedin.com/in/ayshrosine/
